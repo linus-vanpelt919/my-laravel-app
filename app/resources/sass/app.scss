@@ -5,4 +5,12 @@
 @import 'variables';
 
 // Bootstrap
-@import '~bootstrap/scss/bootstrap';
+//@import '~bootstrap/scss/bootstrap';
+
+@import "./base/reset";
+@import "./base/config";
+@import "./base/base";
+@import "./base/module";
+@import "./base/layout";
+//@import './page/**';
+@import "./page/index";

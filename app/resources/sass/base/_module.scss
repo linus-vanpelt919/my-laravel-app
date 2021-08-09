@@ -1,0 +1,76 @@
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+//メディアクエリ
+@mixin max-screen($break-point) {
+  @media screen and (max-width: $break-point) {
+    @content;
+  }
+}
+
+@mixin min-screen($break-point) {
+  @media screen and (min-width: $break-point) {
+    @content;
+  }
+}
+
+@mixin screen($break-point-min, $break-point-max) {
+  @media screen and (min-width: $break-point-min) and (max-width: $break-point-max) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media screen and (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin sp-s {
+  @media screen and (max-width: 320px) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media screen and (min-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin IE {
+  @media all and (-ms-high-contrast: none) {
+    @content;
+  }
+}
+
+@mixin custom_min($width) {
+  @media screen and (min-width: #{$width}px) {
+    @content;
+  }
+}
+
+@mixin custom_max($width) {
+  @media screen and (max-width: #{$width}px) {
+    @content;
+  }
+}
+
+@mixin custom_max_min($width_max, $width_min) {
+  @media screen and (max-width: #{$width_max}px) and (min-width: #{$width_min}px) {
+    @content;
+  }
+}

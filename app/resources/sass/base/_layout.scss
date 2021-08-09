@@ -1,0 +1,64 @@
+body {
+  font-family: "Noto Sans JP",
+    "Yu Gothic Medium",
+    "游ゴシック Medium",
+    YuGothic,
+    "游ゴシック体",
+    Meiryo,
+    "Hiragino Kaku Gothic Pro",
+    "ＭＳ Ｐゴシック",
+    Osaka,
+    Arial,
+    Sans-serif;
+  background: #fff;
+}
+
+.is-pc {
+  display: block;
+
+  @include sp {
+    display: none;
+  }
+}
+
+.is-sp {
+  display: none;
+
+  @include sp {
+    display: block;
+  }
+}
+
+.is-sp-s {
+  display: none;
+
+  @include sp-s {
+    display: block;
+  }
+}
+
+[data-anim-style] {
+  opacity: 0;
+}
+
+[v-cloak] {
+  display: none;
+}
+
+a {
+  color: inherit;
+
+  &:visited {
+    color: inherit;
+  }
+
+  &:link {
+    color: inherit;
+  }
+}
+
+//header
+.header_block {}
+
+//footer
+.footer_block {}
