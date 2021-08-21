@@ -10171,3 +10171,7 @@ a:link {
   text-align: center;
   border: solid 1px #999;
 }
+
+.day-close {
+  background-color: #ffe9ee;
+}
