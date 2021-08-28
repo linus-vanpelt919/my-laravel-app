@@ -22,7 +22,12 @@ class CalendarWeekDay {
 	// function getClassName(){
 	// 	return "day-" . strtolower($this->carbon->format("D"));//format()関数に「D」を指定すると「Sun」「Mon」などの曜日を省略形式で取得できる
 	// }
-
+	function getDateKey(){
+		return $this->carbon->format("Ymd");
+	}
+	function setHoliday($flag){
+		$this->isHoliday = $flag;
+	}
 	/**
 	 * @return 
 	 */

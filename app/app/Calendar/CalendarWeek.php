@@ -42,13 +42,19 @@ class CalendarWeek {//その週のカレンダーを出力するためのクラ�
 			}
 				
 			//今月
-			$day = new CalendarWeekDay($tmpDay->copy());	
-			$day->checkHoliday($setting);
-			$days[] = $day;
+			//$day = new CalendarWeekDay($tmpDay->copy());
+			$days[] = $this->getDay($tmpDay->copy(), $setting);	
+			// $day->checkHoliday($setting);
+			// $days[] = $day;
 			//翌日に移動
 			$tmpDay->addDay(1);
 		}
 		
 		return $days;
+	}
+	function getDay(Carbon $date, HolidaySetting $setting){
+				$day = new CalendarWeekDay($date);
+				$day->checkHoliday($setting);
+				return $day;
 	}
 }

@@ -10175,3 +10175,11 @@ a:link {
 .day-close {
   background-color: #ffe9ee;
 }
+
+.calendar table {
+  table-layout: fixed;
+}
+
+.calendar table .comment {
+  font-size: small;
+}
